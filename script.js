@@ -105,3 +105,4 @@ storage
   .then(() => storage.set("secondItem", "some text"))
   .then(() => storage.get("firstItem"))
   .then(() => storage.delete("secondItem"));
+

@@ -1,4 +1,4 @@
-class indexedDBEngine {
+class IndexedDBEngine {
   constructor() {
     this.dbName = "myDB";
     this.storageName = "storageDB";
@@ -60,7 +60,7 @@ class indexedDBEngine {
   }
 }
 
-class localStorageEngine {
+class LocalStorageEngine {
   set(key, value) {
     return new Promise((resolve) => {
       localStorage.setItem(key, JSON.stringify(value));

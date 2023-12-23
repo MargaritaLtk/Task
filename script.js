@@ -64,19 +64,19 @@ class LocalStorageEngine {
   set(key, value) {
     return new Promise((resolve) => {
       localStorage.setItem(key, JSON.stringify(value));
-      resolve(console.log("added"));
+      resolve();
     });
   }
   get(key) {
     return new Promise((resolve) => {
       let result = JSON.parse(localStorage.getItem(key));
-      resolve(console.log(result));
+      resolve(result);
     });
   }
   delete(key) {
     return new Promise((resolve) => {
       localStorage.removeItem(key);
-      resolve(console.log("removed"));
+      resolve();
     });
   }
 }

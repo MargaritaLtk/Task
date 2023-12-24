@@ -103,6 +103,5 @@ let storage = new KVStorage(KVStorage.indexedDB);
 storage
   .set("firstItem", { name: "bla" })
   .then(() => storage.set("secondItem", "some text"))
-  .then(() => storage.get("firstItem"))
   .then(() => storage.delete("secondItem"));
 

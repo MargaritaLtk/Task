@@ -82,8 +82,8 @@ class LocalStorageEngine {
 }
 
 class KVStorage {
-  static localStorage = new localStorageEngine();
-  static indexedDB = new indexedDBEngine();
+  static localStorage = new LocalStorageEngine();
+  static indexedDB = new IndexedDBEngine();
 
   constructor(engine) {
     this.engine = engine;
@@ -104,4 +104,6 @@ storage
   .set("firstItem", { name: "bla" })
   .then(() => storage.set("secondItem", "some text"))
   .then(() => storage.delete("secondItem"));
+
+
 

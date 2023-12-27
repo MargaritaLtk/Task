@@ -107,3 +107,11 @@ storage
 
 
 
+  function noSpace(x){
+    return x.split('').filter((item)=> item !=' ').join('')
+  
+  }
+let numbers = "8 3 -5 42 -1 0 0 -9 4 7 4 -4";
+let arr = numbers.split(' ').map(item=>+item);
+console.log(arr)
+console.log(Math.min(...arr))

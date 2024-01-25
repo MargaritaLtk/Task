@@ -23,3 +23,16 @@ function sortArray(array) {
   const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
   return array.map((x) => x % 2 ? odd.shift() : x);
 }
+
+function findUniq(arr) {
+  let n = -1;
+  for (let i = 0; i<arr.length; i++) {
+    if (arr.indexOf(arr[i])== arr.lastIndexOf(arr[i]))  {
+      n = arr.indexOf(arr[i]);
+      break;
+    }
+  }
+  return n;
+}
+
+

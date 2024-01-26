@@ -35,4 +35,8 @@ function findUniq(arr) {
   return n;
 }
 
-
+function same(a, b){
+  a=a.map(x=>x.sort().join('=')).sort().join('+');
+  b=b.map(x=>x.sort().join('=')).sort().join('+');
+  return a==b;
+}

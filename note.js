@@ -40,3 +40,8 @@ function same(a, b){
   b=b.map(x=>x.sort().join('=')).sort().join('+');
   return a==b;
 }
+
+
+function onlyDuplicates(str) {
+  return str.split('').filter(e => str.indexOf(e) != str.lastIndexOf(e)).join('')
+}

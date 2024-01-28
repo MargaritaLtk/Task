@@ -45,3 +45,19 @@ function same(a, b){
 function onlyDuplicates(str) {
   return str.split('').filter(e => str.indexOf(e) != str.lastIndexOf(e)).join('')
 }
+
+function removeUrlAnchor(url){
+  return url.includes('#')? url.slice(0, url.indexOf('#')) : url
+}
+
+
+function order(words){
+  const arr = words.split(' ');
+  let newArr = [];
+  for (let i =0; i<arr.length; i++) {
+    const index = arr[i].split('').filter(e=>e>0);
+    newArr[index-1] = arr[i];
+  }
+  return newArr.join(' ');
+  
+}

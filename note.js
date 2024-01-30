@@ -1,3 +1,4 @@
+'use strict'
 function highAndLow(numbers) {
   numbers = numbers.split(" ").map(Number);
   return Math.max.apply(0, numbers) + " " + Math.min.apply(0, numbers);
@@ -60,4 +61,18 @@ function order(words){
   }
   return newArr.join(' ');
   
+}
+
+function solution(str){ 
+  if (str.length ===0) {
+    return [];
+  }
+  const newArr = [];
+  for (let i =0; i<str.split('').length; i= i+2) {
+      newArr.push(str.slice(i,i+2));
+  }
+  if (newArr[newArr.length-1].length === 1) {
+    newArr[newArr.length-1] +='_';
+  }
+  return newArr;
 }

@@ -76,3 +76,10 @@ function solution(str){
   }
   return newArr;
 }
+
+
+function solution(string) {
+  return string.split('').map((item)=> item == item.toUpperCase()? item=` ${item}`: item = item).join('')
+}
+
+

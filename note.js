@@ -82,4 +82,11 @@ function solution(string) {
   return string.split('').map((item)=> item == item.toUpperCase()? item=` ${item}`: item = item).join('')
 }
 
+function count(string) {
+  const obj = {}
+  string.split('').forEach((item) =>{
+     obj[item] ? obj[item]++ : obj[item] =1;
+      })
+  return obj;
+}
 

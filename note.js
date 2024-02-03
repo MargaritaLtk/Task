@@ -93,3 +93,27 @@ function count(string) {
 function removeUrlAnchor(url){
   return url.includes('#')? url.slice(0, url.indexOf('#')) : url
 }
+
+
+function findOutlier(integers){
+  let odd = 0;
+  let even = 0;
+  for (let i = 0; i<3; i++) {
+    integers[i] % 2 == 0 || integers[i]==0? even++: odd++;
+  }
+  return even>odd?integers.find(item=> item%2 !==0):integers.find(item=> item%2 ===0);
+}
+
+
+function findMissingLetter(array){
+  let english = "abcdefghijklmnopqrstuvwxyz".split("");
+  let indexStart = english.indexOf(array[0].toLowerCase());
+  for (let i = 0; i<array.length; i++) {
+    if (array[i].toLowerCase()== english[indexStart]) {
+      indexStart++;
+      continue;
+    } 
+      return array[i] === array[i].toUpperCase()? english[indexStart].toUpperCase(): english[indexStart] ;
+  }
+}
+

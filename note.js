@@ -117,3 +117,8 @@ function findMissingLetter(array){
   }
 }
 
+function stray(numbers) {
+  const first = numbers[0];
+  return  numbers[1]==first || numbers[2] ==first ? numbers.find((item)=> item !==first) :first;
+}
+

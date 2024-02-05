@@ -122,3 +122,4 @@ function stray(numbers) {
   return  numbers[1]==first || numbers[2] ==first ? numbers.find((item)=> item !==first) :first;
 }
 
+const countBits = n => n.toString(2).split('0').join('').length;

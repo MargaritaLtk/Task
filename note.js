@@ -123,3 +123,13 @@ function stray(numbers) {
 }
 
 const countBits = n => n.toString(2).split('0').join('').length;
+
+function partsSums(ls) {
+  const newLs = [];
+  newLs.push(ls.reduce((acc,val)=> acc+val,0));
+  for (let i = 0; i<ls.length; i++) {
+    newLs.push(newLs[i] - ls[i]);
+  }
+  return newLs;
+}
+

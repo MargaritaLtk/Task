@@ -133,3 +133,9 @@ function partsSums(ls) {
   return newLs;
 }
 
+function humanReadable (seconds) {
+  let hours = String(Math.trunc(seconds/3600));
+  let min = String(Math.trunc((seconds%3600) /60));
+  let sec = String(seconds%3600 - min*60);
+  return `${hours.length==1? '0'+ hours: hours}:${min.length==1? '0'+ min: min}:${sec.length==1? '0'+ sec: sec}`
+}

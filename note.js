@@ -139,3 +139,7 @@ function humanReadable (seconds) {
   let sec = String(seconds%3600 - min*60);
   return `${hours.length==1? '0'+ hours: hours}:${min.length==1? '0'+ min: min}:${sec.length==1? '0'+ sec: sec}`
 }
+
+function isIsogram(str){
+	return new Set(str.toUpperCase()).size == str.length;
+}

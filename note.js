@@ -143,3 +143,12 @@ function humanReadable (seconds) {
 function isIsogram(str){
 	return new Set(str.toUpperCase()).size == str.length;
 }
+
+function queueTime(customers, n) {
+  let arr = new Array(n).fill(0);
+  for (let t of customers) {
+    let idx = arr.indexOf(Math.min(...arr));
+    arr[idx] += t;
+  }
+  return Math.max(...arr);
+}

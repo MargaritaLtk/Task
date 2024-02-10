@@ -152,3 +152,10 @@ function queueTime(customers, n) {
   }
   return Math.max(...arr);
 }
+
+function doPass(s, n) {
+  return s.replace(/[A-Z]/g, l => String.fromCharCode((l.charCodeAt(0) + n - 65) % 26 + 65))
+          .replace(/\d/g, d => 9 - d)
+          .split('').map( (l,i) => (i % 2 == 0) ? l.toUpperCase() : l.toLowerCase() )
+          .reverse().join('');
+}

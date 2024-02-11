@@ -159,3 +159,15 @@ function doPass(s, n) {
           .split('').map( (l,i) => (i % 2 == 0) ? l.toUpperCase() : l.toLowerCase() )
           .reverse().join('');
 }
+
+function findEvenIndex(arr){
+  if (!arr) {
+    return -1;
+  }
+  for(var i=1; i<arr.length-1; i++) {
+    if(arr.slice(0, i).reduce((a, b) =>  a+b) === arr.slice(i+1).reduce((a, b) =>  a+b)) {
+      return i;
+    }
+  }
+  return -1;
+}

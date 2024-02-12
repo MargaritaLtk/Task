@@ -164,10 +164,15 @@ function findEvenIndex(arr){
   if (!arr) {
     return -1;
   }
-  for(var i=1; i<arr.length-1; i++) {
+  for(let i=1; i<arr.length-1; i++) {
     if(arr.slice(0, i).reduce((a, b) =>  a+b) === arr.slice(i+1).reduce((a, b) =>  a+b)) {
       return i;
     }
   }
   return -1;
+}
+
+
+function isIsogram(str){
+	return new Set(str.toLowerCase()).size == str.length;
 }

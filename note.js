@@ -176,3 +176,20 @@ function findEvenIndex(arr){
 function isIsogram(str){
 	return new Set(str.toLowerCase()).size == str.length;
 }
+
+function high(x){
+  const alphabet = ['', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+  'm', 'n', 'o', 'p', 'q', 'r',  's', 't', 'u', 'v', 'w', 'x',
+  'y', 'z' ];
+  let counter = 0;
+  let highestWord = '';
+  const arr = x.split(' ');
+  for (let word of arr) {
+     const score = word.split('').reduce((acc,curr)=> acc+ alphabet.indexOf(curr), 0);
+     if (score>counter) {
+      counter = score;
+      highestWord = word;
+     }
+  }
+  return highestWord;
+  }

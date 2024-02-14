@@ -193,3 +193,18 @@ function high(x){
   }
   return highestWord;
   }
+
+
+  function solution(number){
+    if (number<0) {
+      return 0;
+    }
+    const arr = [];
+    for (let i = 1; i<number; i++) {
+     if (i%3 ===0 || i%5 ===0) {
+          arr.push(i);
+     }
+    }
+    return arr.reduce((a,c)=> a+c,0)
+  }
+

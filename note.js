@@ -208,3 +208,10 @@ function high(x){
     return arr.reduce((a,c)=> a+c,0)
   }
 
+
+function digPow(n, p){
+  const number= String(n).split('').map((item,index)=> {
+      return Math.pow(item, index+p);
+  }).reduce((acc,curr)=>acc+curr,0) /n;
+  return number%1? -1: number;
+}
